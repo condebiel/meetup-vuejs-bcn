@@ -1,0 +1,26 @@
+{
+  "name": "mdx-deck-metuup-vuejs-barcelona-testing",
+  "version": "1.0.0",
+  "description": "Blabla",
+  "scripts": {
+    "start": "mdx-deck slides.mdx",
+    "build": "mdx-deck build slides.mdx",
+    "pdf": "mdx-deck pdf slides.mdx",
+    "image": "mdx-deck screenshot slides.mdx",
+    "help": "mdx-deck"
+  },
+  "author": "Biel Conde <bielbcm@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "file-loader": "^2.0.0",
+    "mdx-deck": "^1.10.2",
+    "mdx-deck-code-surfer": "^0.5.5",
+    "raw-loader": "^1.0.0"
+  },
+  "dependencies": {
+    "npm": "^6.4.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "styled-components": "^3.4.5"
+  }
+}

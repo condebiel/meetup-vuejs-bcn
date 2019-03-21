@@ -1,0 +1,311 @@
+export { default as theme } from './src'
+import { Appear, Head, Image, Notes } from 'mdx-deck'
+import { Layout, Split, BGImage } from './src'
+import { CodeSurfer } from 'mdx-deck-code-surfer'
+import nightOwl from 'prism-react-renderer/themes/nightOwl'
+
+<Head>
+  <title>A walk through Vuejs testing with Jest, Cypress and Cucumber</title>
+</Head>
+
+### A walk through Vuejs Testing
+
+#### with Jest, Cypress and Cucumber
+
+<Notes>
+  <h2>Biel Conde</h2>
+  <h2>Voy a contaros</h2>
+  <h2>Testeando el frontend</h2>
+  <h2>¿Cuantos testeais?</h2>
+</Notes>
+
+---
+
+export default Layout
+
+<Image src="./assets/pantalla_azul.jpg" size="50%"/>
+
+<Notes>
+  <h3>No Biblia del testing</h3>
+  <h3>Nuestras experiencias</h3>
+  <h3>Serviros de ayuda</h3>
+  <h3>Casi 1 año</h3>
+  <h3>Backbone</h3>
+  <h3>Vuejs nos enamoró</h3>
+  <h3>Decidimos Proyecto Pequeño</h3>
+  <h3>Cualquier developer</h3>
+</Notes>
+
+---
+
+<Image src="./assets/margarita.png" size="100%"/>
+
+<Notes>
+  <h2>Margarita Pizzas</h2>
+  <h2>Primeras semanas Releases cada día</h2>
+  <h2>Nuestro juguete</h2>
+  <h2>Romper y re-hacer</h2>
+  <h2>Comenzar de cero</h2>
+  <h2>Plan de testing</h2>
+</Notes>
+
+---
+
+export default Layout
+
+# Static code analysis
+
+## ESLint
+
+<Notes>
+  <h3>Linting de código</h3>
+  <h3>No todo el mundo testing</h3>
+  <h3>Lenguaje con mucha libertad</h3>
+  <h3>Fácil introducir errores</h3>
+  <h3>Herramientas que revisan</h3>
+  <h3>Feedback inmediato</h3>
+  <h3>Doc posible errors</h3>
+  <h3>2 tipos de reglas</h3>
+  <h3>Estilísticas y Posibles errores</h3>
+  <h3>CLI Nuxt ya te lo incluyen</h3>
+  <h3>Configurable reglas</h3>
+</Notes>
+
+---
+
+export default Layout
+
+<Image src="./assets/demo-eslint.gif" size="70%"/>
+
+<Notes>
+  <h2>Avisar de errores de sintaxys</h2>
+  <h2>1 simbolo en comparaciones</h2>
+  <h2>Variables no utilizadas</h2>
+  <h2>Autosave</h2>
+</Notes>
+
+
+---
+
+export default Layout
+
+# StoryBook
+
+```bash
+npm install vue-cli-plugin-storybook
+            @storybook/addon-actions
+            @storybook/addon-knobs
+            @storybook/addon-viewport
+```
+
+<Notes>
+  <h3>Teníamos varios componentes</h3>
+  <h3>Sin casos de uso</h3>
+  <h3>Libreria de componentes</h3>
+  <h3>Diferentes estados</h3>
+  <h3>Ayuda a testear manualmente</h3>
+  <h3>Sin estar condicionado por la app</h3>
+  <h3>DEMO TextInput</h3>
+  <h3>DEMO RangeInput</h3>
+</Notes>
+
+---
+
+export default Layout
+
+# Unit testing
+## Jest
+
+<Notes>
+  <h3>Para testear componentes</h3>
+  <h3>a bajo nivel</h3>
+  <h3>FB, TW, SPOTY, HL</h3>
+  <h3>React</h3>
+</Notes>
+
+---
+
+export default Layout
+
+```jsx
+import CheckboxInput from 'margarita'
+
+it('should link input and label elements by custom id', () => {
+  const wrapper = shallowMount(CheckboxInput, {
+    propsData: { id: 'test_checkbox' }
+  })
+
+  expect(wrapper.find('label').attributes().for).toBe('test_checkbox')
+  expect(wrapper.find('input').attributes().id).toBe('test_checkbox')
+})
+```
+
+<Notes>
+  <h3>A bajo nivel</h3>
+</Notes>
+
+---
+
+export default Layout
+
+```jsx
+import { CIF, NIE, NIF } from 'utils/validate-document-id'
+import { createFromNumber } from '_models/DocumentId'
+
+const value = '57347217Y'
+
+it('Should return a document id with the correct document type', () => {
+  const documentId = createFromNumber(value)
+  expect(documentId.type).toBe(NIF)
+})
+```
+
+<Notes>
+  <h3>No solo Vuejs</h3>
+  <h3>Modelo de datos</h3>
+</Notes>
+
+---
+
+export default Layout
+
+```jsx
+it('should set a postcode error if postcode is not valid', async () => {
+  const postcode = '1234'
+
+  await store.actions.loadMunicipalities({ commit }, postcode)
+
+  expect(commit)
+    .toHaveBeenCalledWith('SET_POSTCODE_ERROR', 'postcode-error')
+})
+```
+
+<Notes>
+  <h3>O javascript puro como una store</h3>
+</Notes>
+
+---
+
+export default Layout
+
+# Salimos a producción
+
+<Notes>
+  <h3>Salimos a producción</h3>
+  <h3>Recibimos altas!</h3>
+  <h3>Continuamos release Margarita</h3>
+</Notes>
+
+---
+
+export default Layout
+
+<Image src="./assets/bicycle.gif" size="65%"/>
+
+<Notes>
+  <h3>Código limpio</h3>
+  <h3>Producto nuevo, mucho testeo manual</h3>
+  <h3>Componentes test storybook</h3>
+  <h3>No probados en conjunto</h3>
+</Notes>
+
+---
+
+export default Layout
+
+# e2e test 
+
+## Cypress + Cucumber.js
+
+<Notes>
+  <h2>Cypress</h2>
+  <h3>Tests e2e es probar literalmente como un usuario</h3>
+  <h2>DEMO Cypress</h2>
+  <h3>TDD orientado negocio</h3>
+</Notes>
+
+---
+
+export default Layout
+
+## Nuevas releases Margarita
+
+<Notes>
+  <h3>Ahora sí tenemos todo testeado</h3>
+  <h2>Sacamos nueva release</h2>
+  <h2>Seguimos con el sprint</h2>
+</Notes>
+
+---
+
+export default Layout
+
+<Image src="./assets/f1.gif" size="80%"/>
+
+<Notes>
+  <h3>Lento de ejecutar</h3>
+  <h3>Unitarios cosas concretas, pierdes conjunto</h3>
+  <h3>e2e demasiado globales, pierdes edges cases</h3>
+</Notes>
+
+---
+
+export default Layout
+
+# Integration testing
+## Jest
+
+<Notes>
+  <h3>Testear componentes en conjunto</h3>
+  <h3>Pero sin llegar a realizar tests e2e</h3>
+  <h3>Entre unit test y e2e coste/scope test</h3>
+</Notes>
+
+---
+
+export default Layout
+
+<Image src="./assets/truck.gif" size="80%"/>
+
+<Notes>
+  <h3>Buscamos confiar en nuestros frontales</h3>
+  <h3>Dormir tranquilos</h3>
+  <h3>que nadie nos llame</h3>
+</Notes>
+
+---
+
+export default Layout
+
+## Conclusions
+
+### Code linting is also testing
+### Unit tests: isolation
+### Integration tests: Component tree
+### E2E tests: Use cases
+
+<Notes>
+  <h2>Detectar errores básicos</h2>
+  <h2>Orientado comportamientos aislados</h2>
+  <h2>Que todo funciona en conjunto</h2>
+  <h2>Para asegurarte que funciona a nivel de usuario</h2>
+</Notes>
+
+---
+
+export default Layout
+
+## Last but not least  💡
+
+---
+
+
+# We are hiring 🎉
+
+## @CondeBiel
+## @HolaluzEng
+
+<Notes>
+  <h3>Frontends</h3>
+  <h3>Backends</h3>
+</Notes>

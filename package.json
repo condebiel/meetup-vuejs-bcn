@@ -4,7 +4,7 @@
   "description": "Blabla",
   "scripts": {
     "start": "mdx-deck slides.mdx",
-    "build": "mdx-deck build slides.mdx",
+    "build": "mdx-deck build slides.mdx && cp -r images dist/",
     "pdf": "mdx-deck pdf slides.mdx",
     "image": "mdx-deck screenshot slides.mdx",
     "help": "mdx-deck"
